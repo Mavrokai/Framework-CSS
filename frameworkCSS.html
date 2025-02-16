@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Framework</title>
+    <link rel="stylesheet" href="./css/grilles.css">
+    <link rel="stylesheet" href="./css/remplissage.css">
+    <link rel="stylesheet" href="./css/popin.css">
+    <link rel="stylesheet" href="./css/onglets.css">
+    <link rel="stylesheet" href="./css/info-bulles.css">
+    <link rel="stylesheet" href="./css/masquage.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+</head>
+
+<body>
+    <h2>Grilles</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="content-box">Colonne 1</div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="content-box">Colonne 2</div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="content-box">Colonne 3</div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="content-box">Colonne 4</div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <h2>Remplissages</h2>
+    <h3>Boutons</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <button class="btn btn-primary">Bouton</button>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <button class="btn btn-secondary btn-large">Bouton</button>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <button class="btn btn-success" disabled>Bouton Désactivé</button>
+            </div>
+        </div>
+    </div>
+
+    <h3>Images</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <img src="https://i.pinimg.com/736x/bb/d7/60/bbd76062237a9d9aa193a72ab2f1ef0d.jpg"
+                    alt="fils de sung jin woo" class="img-responsive img-medium img-rounded">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="https://i.pinimg.com/736x/bb/d7/60/bbd76062237a9d9aa193a72ab2f1ef0d.jpg"
+                    alt="fils de sung jin woo" class="img-responsive img-medium img-circle">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="https://i.pinimg.com/736x/bb/d7/60/bbd76062237a9d9aa193a72ab2f1ef0d.jpg"
+                    alt="fils de sung jin woo" class="img-responsive img-medium img-thumbnail">
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="https://i.pinimg.com/736x/bb/d7/60/bbd76062237a9d9aa193a72ab2f1ef0d.jpg"
+                    alt="fils de sung jin woo" class="img-responsive img-medium img-blur">
+            </div>
+        </div>
+    </div>
+
+    <h3>Couleurs</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <p class="text-primary">Texte en bleu</p>
+                <p class="text-success">Texte en vert</p>
+                <p class="text-info">Texte en cyan</p>
+                <p class="text-warning">Texte en jaune</p>
+                <p class="text-error">Texte en rouge</p>
+                <p class="text-muted">Texte en gris</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <p class="bg-primary text-light p-3">Fond bleu</p>
+                <p class="bg-success text-light p-3">Fond vert</p>
+                <p class="bg-info text-light p-3">Fond cyan</p>
+                <p class="bg-warning text-dark p-3">Fond jaune</p>
+                <p class="bg-error text-light p-3">Fond rouge</p>
+                <p class="bg-muted text-light p-3">Fond gris</p>
+            </div>
+        </div>
+    </div>
+
+    <h3>Alertes</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success">Opération réussie !</div>
+            </div>
+            <div class="col-12">
+                <div class="alert alert-info">Ceci est une notification importante.</div>
+            </div>
+            <div class="col-12">
+                <div class="alert alert-warning">Veuillez vérifier vos informations avant de continuer.</div>
+            </div>
+            <div class="col-12">
+                <div class="alert alert-danger">Une erreur s'est produite. Veuillez réessayer.</div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <h2>Masquer des éléments</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 visible-xs">
+                <p>Ce contenu est visible uniquement sur mobile.</p>
+            </div>
+            <div class="col-12 hidden-xs">
+                <p>Ce contenu est caché sur mobile.</p>
+            </div>
+            <div class="col-12 visible-sm">
+                <p>Ce contenu est visible uniquement sur tablette.</p>
+            </div>
+            <div class="col-12 visible-lg">
+                <p>Ce contenu est visible uniquement sur desktop.</p>
+            </div>
+            <div class="col-12 visible-print">
+                <p>Ce contenu est visible uniquement à l'impression.</p>
+            </div>
+            <div class="col-12 hidden-print">
+                <p>Ce contenu est caché à l'impression.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Navbars</h2>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="#">NomDuSite</a>
+        </div>
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+            <span class="navbar-toggle-icon">&#9776;</span>
+        </button>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link">Accueil</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">À propos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+    <h2>Popin</h2>
+    <button class="btn btn-primary" data-target="#myModal">Ouvrir la Popin</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Test Popin</h2>
+                <button class="popin-dismiss">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Ceci est un test de contenu dans la popin.</p>
+                <div class="row">
+                    <div class="col-6">
+                        <p>Colonne 1</p>
+                    </div>
+                    <div class="col-6">
+                        <p>Colonne 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary popin-dismiss">Fermer</button>
+                <button class="btn btn-primary">Valider</button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <h2>Onglets</h2>
+    <div class="tab-container">
+        <ul class="tab-list">
+            <li class="tab-item active" data-target="#tab1">Onglet 1</li>
+            <li class="tab-item" data-target="#tab2">Onglet 2</li>
+            <li class="tab-item" data-target="#tab3">Onglet 3</li>
+        </ul>
+        <div class="tab-content">
+            <div id="tab1" class="tab-pane active">
+                <p>Contenu de l'onglet 1.</p>
+            </div>
+            <div id="tab2" class="tab-pane">
+                <p>Contenu de l'onglet 2.</p>
+                <div class="tab-container">
+                    <ul class="tab-list">
+                        <li class="tab-item active" data-target="#nested-tab1">Sous-Onglet 1</li>
+                        <li class="tab-item" data-target="#nested-tab2">Sous-Onglet 2</li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="nested-tab1" class="tab-pane active">
+                            <p>Contenu du sous-onglet 1.</p>
+                        </div>
+                        <div id="nested-tab2" class="tab-pane">
+                            <p>Contenu du sous-onglet 2.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab3" class="tab-pane">
+                <p>Contenu de l'onglet 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <h2>Info-bulles</h2>
+    <button class="tooltip" title="Ceci est une info-bulle en haut" data-placement="top">Bouton 1</button>
+    <button class="tooltip" title="Ceci est une info-bulle à droite" data-placement="right">Bouton 2</button>
+    <button class="tooltip" title="Ceci est une info-bulle en bas" data-placement="bottom">Bouton 3</button>
+    <button class="tooltip" title="Ceci est une info-bulle à gauche" data-placement="left">Bouton 4</button>
+    <p class="tooltip" title="Ceci est une info-bulle sur un paragraphe" data-placement="top">Survolez-moi !</p>
+
+    <script src="./js/info-bulles.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/onglets.js"></script>
+    <script src="./js/popin.js"></script>
+</body>
+
+</html>
