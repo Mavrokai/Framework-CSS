@@ -1,0 +1,30 @@
+.tab-container {
+  margin: 20px;
+}
+.tab-list {
+  display: flex;
+  padding: 0;
+  border-bottom: 2px solid #007bff;
+}
+.tab-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #007bff;
+  transition: all 0.3s;
+}
+.tab-item.active {
+  background: #007bff;
+  color: white;
+}
+.tab-content {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+.tab-pane {
+  display: none;
+}
+.tab-pane.active {
+  display: block;
+}
+
+/*# sourceMappingURL=onglets.css.map */

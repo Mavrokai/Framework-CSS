@@ -1,0 +1,41 @@
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+.tooltip-text {
+  position: absolute;
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 1000;
+}
+.tooltip-text[data-placement=top] {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip-text[data-placement=bottom] {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tooltip-text[data-placement=left] {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tooltip-text[data-placement=right] {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tooltip:hover .tooltip-text {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=info-bulles.css.map */
