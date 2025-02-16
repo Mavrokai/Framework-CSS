@@ -1,0 +1,74 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin breakpoint($point) {
+  @if map-has-key($breakpoints, $point) {
+    $value: map-get($breakpoints, $point);
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include breakpoint(xl) {
+    max-width: 1140px;
+  }
+  
+  @include breakpoint(lg) {
+    max-width: 960px;
+  }
+
+  @include breakpoint(sm) {
+    max-width: 540px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@each $breakpoint, $value in $breakpoints {
+  .col-#{$breakpoint} {
+    @if $breakpoint == xs {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    @else {
+      @include breakpoint($breakpoint) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  @each $size in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) {
+    .col-#{$breakpoint}-#{$size} {
+      @include breakpoint($breakpoint) {
+        flex: 0 0 (100% / 12) * $size;
+        max-width: (100% / 12) * $size;
+      }
+    }
+  }
+}

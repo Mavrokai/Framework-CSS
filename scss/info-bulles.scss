@@ -1,0 +1,48 @@
+$tooltip-bg: #333;
+$tooltip-padding: 5px 10px;
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+
+    &-text {
+        position: absolute;
+        background: $tooltip-bg;
+        color: white;
+        padding: $tooltip-padding;
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+        white-space: nowrap;
+        z-index: 1000;
+
+        &[data-placement="top"] {
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &[data-placement="bottom"] {
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &[data-placement="left"] {
+            right: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &[data-placement="right"] {
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &:hover &-text {
+        opacity: 1;
+    }
+}

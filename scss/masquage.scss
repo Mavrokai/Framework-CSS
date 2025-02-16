@@ -1,0 +1,51 @@
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+@mixin breakpoint($name) {
+    @if map-has-key($breakpoints, $name) {
+        @media (min-width: map-get($breakpoints, $name)) {
+            @content;
+        }
+    }
+}
+
+.visible-print {
+    display: none !important;
+}
+
+.hidden-print {
+    display: block !important;
+}
+
+@media print {
+    .visible-print {
+        display: block !important;
+    }
+
+    .hidden-print {
+        display: none !important;
+    }
+}
+
+@each $bp, $value in $breakpoints {
+    .visible-#{$bp} {
+        display: none !important;
+
+        @include breakpoint($bp) {
+            display: block !important;
+        }
+    }
+
+    .hidden-#{$bp} {
+        display: block !important;
+
+        @include breakpoint($bp) {
+            display: none !important;
+        }
+    }
+}
